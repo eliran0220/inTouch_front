@@ -15,6 +15,7 @@ export const createUser = async (user : IUserDto) : Promise<IUserDto> => {
         })
         //const result = (await db.query(sql_query,[...params])).rows[0] as IUserDto;
         await new_user.save();
+        console.log(new_user);
         return new_user;
     } catch (err) {
         console.log(err)
